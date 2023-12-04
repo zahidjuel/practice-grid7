@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w3 layout</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        .grid-container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 5px;
+            grid-template-areas:
+                "m m m h h h h h h h h h"
+                "m m m main main main main main r r r r"
+                "m m m f f f f f f f f f";
+        }
+
+        .item1 {
+            grid-area: h;
+        }
+
+        .item2 {
+            grid-area: m;
+        }
+
+        .item3 {
+            grid-area: main;
+        }
+
+        .item4 {
+            grid-area: r;
+        }
+
+        .item5 {
+            grid-area: f;
+        }
+
+        .grid-container>div {
+            background-color: blueviolet;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin: 8px 0px; */
+            /* border: 2px solid red; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grid Layout</h1>
+
+    <p>The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design
+        web pages without having to use floats and positioning:</p>
+
+    <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>
+        <div class="item4">Right</div>
+        <div class="item5">Footer</div>
+    </div>
+</body>
+
+</html>
